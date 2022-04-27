@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Testimonial Box</title>
+  </head>
+  <body>
+    <div class="testimonial-container">
+      <div class="progress-bar"></div>
+      <div class="fas fa-quote-right fa-quote"></div>
+      <div class="fas fa-quote-left fa-quote"></div>
+      <p class="testimonial">
+       Ised ut convallis ante. Aliquam in aliquam ligula. Mvestibulum erat est, sollicitudin et commodo quis, sodales et eros. Adonec id sem arcu. Bvivamus rutrum accumsan nulla, sed auctor quam placerat at. Idonec ligula leo, pulvinar quis magna vel, facilisis pretium nulla. Tnunc fringilla eros sit amet massa laoreet, a consectetur metus hendrerit. Cproin dictum eu massa finibus tempor. Hmaecenas nec mi augue. Integer nisl velit, eleifend ut euismod sit amet, aliquam eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </p>
+      <div class="user">
+        <img
+          src="https://images.pexels.com/photos/800330/pexels-photo-800330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="user"
+          class="user-image" 
+		  height="200px"
+        />
+        <div class="user-details">
+          <h4 class="username">Chris</h4>
+          <p class="role">Student</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const testimonialsContainer = document.querySelector(
+        ".testimonials-container"
+      );
+      const testimonial = document.querySelector(".testimonial");
+      const userImage = document.querySelector(".user-image");
+      const username = document.querySelector(".username");
+      const role = document.querySelector(".role");
+
+      const testimonials = [
+        {
+          name: "Jonathan",
+          position: "Assassin",
+          photo:
+            "https://images.pexels.com/photos/191353/pexels-photo-191353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Fusce augue nisl, venenatis sed pulvinar ac, hendrerit nec enim. Sed ut nulla elementum, mollis nisl vitae, rhoncus nulla. Sed at dui luctus, consequat augue non, sodales ante. Nullam aliquam sit amet felis non convallis. Proin vitae finibus tortor. Suspendisse vulputate fringilla leo hendrerit facilisis. Donec at purus nec odio dignissim convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse semper elit fermentum semper consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In id nisl sed dolor accumsan tincidunt vel in ipsum."
+        },
+        {
+          name: "Bob",
+          position: "Nuclear Physicist",
+          photo: "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg",
+          text:
+            "Integer vel purus eget quam facilisis pretium. In hac habitasse platea dictumst. Etiam volutpat malesuada enim finibus molestie. Cras et porttitor mi. Aenean aliquam, ligula a ultrices interdum, erat sem finibus justo, eu hendrerit orci nisl sed nunc. Vivamus at semper mi. Aliquam sagittis dolor in urna mattis mattis. Proin pharetra mollis eros, a facilisis orci mattis quis."
+        },
+        {
+          name: "Barry",
+          position: "Hot Dog Maker",
+          photo: "https://images.pexels.com/photos/895259/pexels-photo-895259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Curabitur velit eros, sollicitudin eu dictum sit amet, hendrerit nec neque. Cras aliquet ornare enim, a condimentum erat mollis sit amet. Vivamus sagittis diam massa. Nam iaculis diam nec vulputate rutrum. Morbi eu dolor eget elit efficitur commodo. In laoreet quam id tincidunt cursus. Vestibulum et dolor vel est dignissim venenatis vitae eu neque. Vestibulum porta, odio a scelerisque vestibulum, lectus augue scelerisque leo, nec eleifend lorem ligula sit amet dolor. Mauris a rhoncus orci, vel vulputate leo."
+        },
+        {
+          name: "Collin",
+          position: "Walmart Employee",
+          photo: "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Etiam sit amet erat non metus commodo blandit. Aenean diam eros, luctus ut iaculis non, vulputate ut mi. Aliquam et sem sed enim dapibus dapibus. Sed condimentum, urna non tempor egestas, dolor diam pellentesque nulla, pharetra sollicitudin ex magna sed ligula. Quisque dapibus ligula maximus odio pellentesque consectetur. Sed viverra elit nisi, et congue urna ultricies vitae. Vivamus et metus euismod, sodales nisl ut, convallis felis. Nam bibendum lobortis enim id maximus. Nulla ut tincidunt risus. Suspendisse porttitor odio et vulputate rutrum. Maecenas vehicula elit vitae neque volutpat, id luctus ex placerat. Nulla facilisi."
+        },
+        {
+          name: "Kai",
+          position: "Marshalls Employee",
+          photo: "https://images.pexels.com/photos/46505/swiss-shepherd-dog-dog-pet-portrait-46505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Aenean nec eros non erat dapibus mollis. Cras vitae augue lectus. Ut porta ante nec dapibus vestibulum. Donec lacinia nibh id venenatis sagittis. Proin sed laoreet dolor. Vestibulum mollis aliquam sem, quis posuere nisl blandit id. Aenean ac volutpat mauris, sit amet commodo eros. Integer metus nulla, vulputate quis ipsum in, placerat pretium dolor. Maecenas ac tellus erat. Nunc sit amet purus lobortis, tempor metus vel, mollis est."
+        },
+        {
+          name: "Anonymous",
+          position: "---REDACTED---",
+          photo:
+            "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Praesent mollis, purus sit amet gravida dignissim, ligula sapien sodales tellus, sed blandit est neque id justo. Nulla semper lectus vel tortor porta molestie. Cras vehicula porttitor tellus, eget placerat arcu facilisis vel. Nunc consequat magna a libero iaculis congue. In vel justo consequat, laoreet est quis, ultricies tortor. Phasellus id posuere leo. Nulla sed ipsum a ipsum sollicitudin auctor id elementum lacus. Suspendisse elementum lorem in porttitor dictum. Integer nulla neque, rutrum a lectus vel, sollicitudin imperdiet neque. Nunc rutrum pellentesque ipsum at fermentum. Nulla facilisi. Donec ipsum ante, cursus sit amet erat vel, dapibus posuere neque. Morbi consectetur dictum ullamcorper."
+        },
+        {
+          name: "Chris",
+          position: "Student",
+          photo: "https://images.pexels.com/photos/800330/pexels-photo-800330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+          text:
+            "Ised ut convallis ante. Aliquam in aliquam ligula. Mvestibulum erat est, sollicitudin et commodo quis, sodales et eros. Adonec id sem arcu. Bvivamus rutrum accumsan nulla, sed auctor quam placerat at. Idonec ligula leo, pulvinar quis magna vel, facilisis pretium nulla. Tnunc fringilla eros sit amet massa laoreet, a consectetur metus hendrerit. Cproin dictum eu massa finibus tempor. Hmaecenas nec mi augue. Integer nisl velit, eleifend ut euismod sit amet, aliquam eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+        }
+      ];
+
+      let idx = 1;
+
+      function updateTestimonial() {
+        const { name, position, photo, text } = testimonials[idx];
+
+        testimonial.innerHTML = text;
+        userImage.src = photo;
+        username.innerHTML = name;
+        role.innerHTML = position;
+
+        idx++;
+
+        if (idx > testimonials.length - 1) {
+          idx = 0;
+        }
+      }
+
+      setInterval(updateTestimonial, 10000);
+    </script>
+  </body>
+</html>
+
